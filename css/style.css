@@ -1,0 +1,14 @@
+/* jumbotron滑入效果 */
+.link.jumbotron, div.link{
+  transition: transform .3s;
+}
+
+.link.jumbotron:hover, div.link:hover{
+  transform: scale(1.05);
+  opacity: .9;
+  cursor: pointer;
+}
+
+.a> .active{
+  background-color: #29ABE0;
+}
