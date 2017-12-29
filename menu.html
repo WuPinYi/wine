@@ -65,11 +65,11 @@
 			<!-- 左側列表 -->
 			<div class="col-3">
 				<div class="list-group">
-					<a href="#" class="list-group-item list-group-item-action active"> ALL <span class="badge badge-dark badge-pill"></span></a>
-					<a href="#" class="list-group-item list-group-item-action">啤酒 <span class="badge badge-dark badge-pill"></span></a>
-					<a href="#" class="list-group-item list-group-item-action">紅酒 <span class="badge badge-dark badge-pill"></span></a>
-					<a href="#" class="list-group-item list-group-item-action">白酒 <span class="badge badge-dark badge-pill"></span></a>
-					<a href="#" class="list-group-item list-group-item-action">氣泡酒 <span class="badge badge-dark badge-pill"></span></a>
+					<a href="#" class="list-group-item list-group-item-action active" onclick='showhidediv("")'> ALL <span class="badge badge-dark badge-pill"></span></a>
+					<a href="#" class="list-group-item list-group-item-action" onclick='showhidediv("beer")';>啤酒 <span class="badge badge-dark badge-pill"></span></a>
+					<a href="#" class="list-group-item list-group-item-action" onclick='showhidediv("redWine")';>紅酒 <span class="badge badge-dark badge-pill"></span></a>
+					<a href="#" class="list-group-item list-group-item-action" onclick='showhidediv("whiteWine")';>白酒 <span class="badge badge-dark badge-pill"></span></a>
+					<a href="#" class="list-group-item list-group-item-action" onclick='showhidediv("bubbleWine")';>氣泡酒 <span class="badge badge-dark badge-pill"></span></a>
 				</div>
 			</div>
 
@@ -77,7 +77,7 @@
 			<div class="col-9">
 
 			<!--啤酒-->
-			<div class="row beer">
+			<div class="row" id="beer" >
 				<div class="col-12 col-lg-4 mb-2">
 					<a href="beer_0.html" class="text-dark product-item">
 						<div class="card">
@@ -135,7 +135,7 @@
 			</div>
 
 			<!--紅酒-->
-			<div class="row redWine">
+			<div class="row" id="redWine" >
 				<div class="col-12 col-lg-4 mb-2">
 					<a href="redwine_0.html" class="text-dark product-item">
 						<div class="card">
@@ -171,7 +171,7 @@
 					</a>
 				</div>
 				<div class="col-12 col-lg-4 mb-2">
-					<a href="redwine_0.html" class="text-dark product-item">
+					<a href="redwine_2.html" class="text-dark product-item">
 						<div class="card">
 							<div class="card-body position-relative">                            
 								<div class="row no-gutters text-left text-lg-center">
@@ -190,7 +190,7 @@
 			</div>
 
 			<!--白酒-->
-			<div class="row whiteWine">
+			<div class="row" id="whiteWine" >
 				<div class="col-12 col-lg-4 mb-2">
 					<a href="whitewine_0.html" class="text-dark product-item">
 						<div class="card">
@@ -246,7 +246,7 @@
 
 
 			<!--氣泡酒-->
-			<div class="row bubbleWine">
+			<div class="row" id="bubbleWine" >
 				<div class="col-12 col-lg-4 mb-2">
 					<a href="bubblewine_0.html" class="text-dark product-item">
 						<div class="card">
@@ -381,13 +381,28 @@
 					$('a[href^="#"]').on('click', function (e) {
 						$('a').each(function () {
 							$(this).removeClass('active');
-            //$(this).style.color="white";
-        });
+        				});
 						$(this).addClass('active');
-        //$(this).style.color="blue";
-    });
+    				});
 				});
 
+				function showhidediv(id){
+					var ids = ["beer", "redWine", "whiteWine","bubbleWine"];
+					if (id=="") {
+						ids.forEach(function(element) {
+    					var asdf=document.getElementById(element);
+    					asdf.style.display='';
+						});	
+					}
+					else{
+						ids.forEach(function(element) {
+    					var asdf=document.getElementById(element);
+    					asdf.style.display='none';
+						});
+					}
+					var qwer=document.getElementById(id);
+					qwer.style.display='';
+				}
 
 			</script>
 
