@@ -1,15 +1,58 @@
 /* jumbotron滑入效果 */
 .link.jumbotron, div.link{
-  transition: transform .3s;
+	transition: transform .3s;
 }
 
 .link.jumbotron:hover, div.link:hover{
-  transform: scale(1.05);
-  opacity: .9;
-  cursor: pointer;
+	transform: scale(1.05);
+	opacity: .9;
+	cursor: pointer;
 }
 
 .list-group-item.active{
-  background-color: #29ABE0;
+	background-color: #29ABE0;
 }
 
+.redWine{
+	height:45rem;
+	background-size:cover;
+	background-image: url("https://c.pxhere.com/photos/d8/25/wine_bottle_wine_glass_drink_alcohol_wineglass-59496.jpg!d");
+	-webkit-clip-path: polygon(0 0, 100% 50%, 100% 0);
+	clip-path: polygon(0 0, 100% 50%, 100% 0);
+	background-repeat: no-repeat;
+
+}
+
+.whiteWine{
+	height:45rem;
+	background-size: cover;
+	background-image: url("https://c.pxhere.com/photos/55/d7/two_types_of_wine_white_wine_glass_grapes_bottle_the_drink_drinks-398923.jpg!d");
+	-webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+	clip-path: polygon(0 0, 100% 50%, 0 100%);
+	transform: translateY(-720px);
+	background-repeat: no-repeat;
+
+}
+
+.beer{
+	height:45rem;
+	background-size:cover;
+	background-image: url("https://c.pxhere.com/photos/7c/ef/miscanthus_miscanthus_sinensis_back_light_licorice_poaceae_silver_spring_bamboo_grassedit_this_page_small_elefantengras-1262368.jpg!d");
+	-webkit-clip-path: polygon(100% 100%, 100% 0, 0 50%);
+	clip-path: polygon(100% 100%, 100% 0, 0 50%);
+	 transform: translateY(-1080px);
+	 background-repeat: no-repeat;
+
+}
+
+.bubble{
+
+	height:45rem;
+	background-size: cover;
+	background-image: url("https://c.pxhere.com/photos/e8/76/champagne_glass_bubble_wine-115900.jpg!d");
+	-webkit-clip-path: polygon(100% 50%, 0 100%, 0 0);
+	clip-path: polygon(100% 50%, 0 100%, 0 0);
+transform: translateY(-1440px);
+background-repeat: no-repeat;
+
+}
