@@ -17,6 +17,10 @@
 	height: 88rem;
 }
 
+.myMOUSE{
+ cursor: pointer; 
+}
+
 .redWine{
 	height:45rem;
 	background-size:cover;
