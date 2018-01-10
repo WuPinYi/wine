@@ -295,13 +295,6 @@
 	</div>
 
 
-
-
-
-
-
-
-
 	<!--footer -->
 
 <!--
@@ -347,8 +340,6 @@
 
 
 
-
-
 </body>
 <!-- Bootstrap JS -->
 <script src="js/jquery-3.2.1.slim.min.js"></script>
@@ -357,9 +348,39 @@
 
 
 <script type="text/javascript">
-  $('#aboutUsSwitch').click(function(){
-    $("#aboutUsSwitchHidden").trigger("click");
-  });
-</script>
+				$('#aboutUsSwitch').click(function(){
+					$("#aboutUsSwitchHidden").trigger("click");
+				});
+
+				$(document).ready(function (){
+					$('a[href^="#"]').on('click', function (e) {
+						$('a').each(function () {
+							$(this).removeClass('active');
+							
+						});
+						$(this).addClass('active');
+
+					});
+				});
+				function showhidediv(id){
+					var ids = ["beer", "redWine", "whiteWine","bubbleWine"];
+					if (id=="") {
+						ids.forEach(function(element) {
+							var asdf=document.getElementById(element);
+							asdf.style.display='';
+						});	
+					}
+					else{
+						ids.forEach(function(element) {
+							var asdf=document.getElementById(element);
+							asdf.style.display='none';
+						});
+					}
+					var qwer=document.getElementById(id);
+					qwer.style.display='';
+				}
+
+
+			</script>
 
 </html>
